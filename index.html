@@ -493,7 +493,7 @@ Mazza</span></h1></div></div></div></div></div></section></div></div></section><
 $(document).ready(function(){
 	var referrer = location.pathname;
 	console.log(referrer);
-    	var referrer2 = parent.document.referrer;
+    	var referrer2 = document.referrer;
 	console.log(referrer2);
 	let logo = $("#comp-l1az6201");
 	$("#comp-l1az6201").fadeIn(400);
@@ -521,7 +521,7 @@ $(document).ready(function(){
 				$("#comp-l1az6201").fadeOut(400, () => {
 					var referrer = location.pathname;
 	console.log(referrer);
-    	var referrer2 = parent.document.referrer;
+    	var referrer2 = document.referrer;
 	console.log(referrer2);
 					location.href=link;
 				});
