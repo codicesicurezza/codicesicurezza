@@ -491,9 +491,9 @@ Mazza</span></h1></div></div></div></div></div></section></div></div></section><
 
 <script>
 $(document).ready(function(){
-	var referrer = location.origin;
+	var referrer = window.location.origin;
 	console.log(referrer);
-    	var referrer2 = document.referrer;
+    	var referrer2 = parent.document.referrer;
 	console.log(referrer2);
 	let logo = $("#comp-l1az6201");
 	$("#comp-l1az6201").fadeIn(400);
@@ -519,9 +519,9 @@ $(document).ready(function(){
 	 		menu.animate({left: '-=299.5px'}, "slow", () => {
 	 		$("#comp-l1azzn7y").hide();
 				$("#comp-l1az6201").fadeOut(400, () => {
-					var referrer = location.origin;
+					var referrer = window.location.origin;
 	console.log(referrer);
-    	var referrer2 = document.referrer;
+    	var referrer2 = parent.document.referrer;
 	console.log(referrer2);
 					location.href=link;
 				});
