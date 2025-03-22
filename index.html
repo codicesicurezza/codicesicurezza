@@ -510,6 +510,7 @@ $(document).ready(function(){
 		let btn=$(event.target).attr('id').replace("label","");
 		let link=document.getElementById(btn).childNodes[0].href;
 		console.log(link);
+		if (link.endsWith("contatti")) console.log(parent.document.referrer);
 		event.preventDefault();
 		$("main").fadeOut(600);
 		$("footer").fadeOut(600, () => {
