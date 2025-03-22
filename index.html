@@ -510,7 +510,7 @@ $(document).ready(function(){
 		let btn=$(event.target).attr('id').replace("label","");
 		let link=document.getElementById(btn).childNodes[0].href;
 		console.log(link);
-		if (link.endsWith("contatti")) location.href=link;
+		if (link.endsWith("contatti")) location.href="https://www.codicesicurezza.com/#contatti";
 		event.preventDefault();
 		$("main").fadeOut(600);
 		$("footer").fadeOut(600, () => {
