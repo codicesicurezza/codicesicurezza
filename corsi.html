@@ -12663,11 +12663,19 @@
     </ddict-div>
 <script>
 $(document).ready(function(){
-    var referrer = window.location.href;
-	console.log(referrer);
-    var referrer2 = document.referrer;
-	console.log(referrer2);
-    });
+	let logo = $("#comp-l1az6201");
+	$("#comp-l1az6201").fadeIn(400);
+	logo.animate({position: 'relative', 'z-index': '1'}, 0, () => {
+		$("#comp-l1azzn7y").show();
+		logo.animate({left: '-=263px'}, "slow");
+    	let menu = $("#comp-l1azzn7y");  
+	 	menu.animate({left: '+=299.5px'}, "slow", () => {
+			$("main").fadeIn(1000);
+			$("footer").fadeIn(1000, () => {
+	if (window.location.href.endsWith("#contatti")) $('html, body').animate({scrollTop: $("#contatti").offset().top},800);
+			});
+		});
+	});
 	$(".wixui-dropdown-menu__item").click(function() {
 		let btn=$(event.target).attr('id').replace("label","");
 		let link=document.getElementById(btn).childNodes[0].href;
