@@ -493,6 +493,7 @@ Mazza</span></h1></div></div></div></div></div></section></div></div></section><
 $(document).ready(function(){
 	var referrer = window.location.href;
 	console.log(referrer);
+	if (link.endsWith("#contatti")) $('html, body').animate({scrollTop: $("#contatti").offset().top},800);
     	var referrer2 = document.referrer;
 	console.log(referrer2);
 	let logo = $("#comp-l1az6201");
@@ -510,7 +511,7 @@ $(document).ready(function(){
 		let btn=$(event.target).attr('id').replace("label","");
 		let link=document.getElementById(btn).childNodes[0].href;
 		console.log(link);
-		if (link.endsWith("contatti")) {
+		if (link.endsWith("#contatti")) {
 			location.href="https://www.codicesicurezza.com/#contatti";
 			return;
 		}
