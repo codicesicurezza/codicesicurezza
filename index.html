@@ -500,11 +500,7 @@ $(document).ready(function(){
 	 	menu.animate({left: '+=299.5px'}, "slow", () => {
 			$("main").fadeIn(1000);
 			$("footer").fadeIn(1000, () => {
-				var referrer = window.location.href;
-	console.log(referrer);
 	if (window.location.href.endsWith("#contatti")) $('html, body').animate({scrollTop: $("#contatti").offset().top},800);
-    	var referrer2 = document.referrer;
-	console.log(referrer2);
 			});
 		});
 	});
