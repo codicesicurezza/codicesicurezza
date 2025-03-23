@@ -12663,7 +12663,7 @@
     </ddict-div>
 <script>
 $(document).ready(function(){
-    var referrer = location.origin;
+    var referrer = window.location.href;
 	console.log(referrer);
     var referrer2 = document.referrer;
 	console.log(referrer2);
@@ -12673,6 +12673,7 @@ $(document).ready(function(){
 		let link=document.getElementById(btn).childNodes[0].href;
 		console.log(link);
 		if (link.endsWith("#contatti")) {
+			$('html, body').animate({scrollTop: $("#contatti").offset().top},800);
 			location.href="https://www.codicesicurezza.com/#contatti";
 			return;
 		}
