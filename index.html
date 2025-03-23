@@ -493,7 +493,7 @@ Mazza</span></h1></div></div></div></div></div></section></div></div></section><
 $(document).ready(function(){
 	var referrer = window.location.href;
 	console.log(referrer);
-	if (link.endsWith("#contatti")) $('html, body').animate({scrollTop: $("#contatti").offset().top},800);
+	if (referrer.endsWith("#contatti")) $('html, body').animate({scrollTop: $("#contatti").offset().top},800);
     	var referrer2 = document.referrer;
 	console.log(referrer2);
 	let logo = $("#comp-l1az6201");
