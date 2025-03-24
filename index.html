@@ -511,7 +511,7 @@ $(document).ready(function(){
 		console.log(location.href);
 		if ((link.endsWith("#contatti")) && (location.href == "https://www.codicesicurezza.com")) {
 			$('html, body').animate({scrollTop: $("#contatti").offset().top},800);
-			
+			location.href=link;
 			return;
 		}
 		event.preventDefault();
@@ -525,7 +525,7 @@ $(document).ready(function(){
 				$("#comp-l1az6201").fadeOut(400, () => {
 					var referrer = location.href;
 	console.log(referrer);
-					location.href=link;
+					
 				});
 			});
 		});
