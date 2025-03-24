@@ -507,6 +507,7 @@ $(document).ready(function(){
 	$(".wixui-dropdown-menu__item").click(function() {
 		let btn=$(event.target).attr('id').replace("label","");
 		let link=document.getElementById(btn).childNodes[0].href;
+		event.preventDefault();
 		console.log(link);
 		console.log(location.href);
 		if ((link.endsWith("#contatti")) && (location.href == "https://www.codicesicurezza.com")) {
@@ -514,7 +515,7 @@ $(document).ready(function(){
 			location.href=link;
 			return;
 		}
-		event.preventDefault();
+		
 		$("footer").fadeOut(600);
 		$("main").fadeOut(600, () => {
 			let logo = $("#comp-l1az6201");
@@ -524,7 +525,8 @@ $(document).ready(function(){
 	 		$("#comp-l1azzn7y").hide();
 				$("#comp-l1az6201").fadeOut(400, () => {
 					var referrer = location.href;
-	console.log(referrer);
+					console.log(link);
+					console.log(referrer);
 					
 				});
 			});
