@@ -12675,9 +12675,10 @@ $(document).ready(function(){
 		let btn=$(event.target).attr('id').replace("label","");
 		let link=document.getElementById(btn).childNodes[0].href;
 		console.log(link);
-		if ((link.endsWith("#contatti")) && (window.location.href == "https://www.codicesicurezza.com")) {
+		if ((link.endsWith("#contatti")) && (location.href == "https://www.codicesicurezza.com")) {
+			console.log(location.href);
 			$('html, body').animate({scrollTop: $("#contatti").offset().top},800);
-			location.href=link;
+			<--location.href=link;-->
 			return;
 		}
 		event.preventDefault();
