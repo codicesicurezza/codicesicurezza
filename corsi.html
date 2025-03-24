@@ -12678,7 +12678,7 @@ $(document).ready(function(){
 		if ((link.endsWith("#contatti")) && (location.href == "https://www.codicesicurezza.com")) {
 			console.log(location.href);
 			$('html, body').animate({scrollTop: $("#contatti").offset().top},800);
-			<!--location.href=link;-->
+			location.href=link;
 			return;
 		}
 		event.preventDefault();
@@ -12691,8 +12691,9 @@ $(document).ready(function(){
 	 		$("#comp-l1azzn7y").hide();
 				$("#comp-l1az6201").fadeOut(400, () => {
 					var referrer = location.href;
-	console.log(referrer);
-					location.href=link;
+					console.log(link);
+					console.log(referrer);
+					
 				});
 			});
 		});
