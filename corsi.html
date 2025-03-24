@@ -3097,12 +3097,6 @@
                         </footer>
                     </div>
                 </div>
-                <div id="SCROLL_TO_BOTTOM" class="Vd6aQZ ignore-focus SCROLL_TO_BOTTOM"
-                tabindex="-1" role="region" aria-label="bottom of page">
-                    <span class="mHZSwn">
-                        bottom of page
-                    </span>
-                </div>
             </div>
         </div>
         <script type="application/json" id="wix-fedops">
@@ -12687,8 +12681,8 @@ $(document).ready(function(){
 			return;
 		}
 		event.preventDefault();
-		$("main").fadeOut(600);
-		$("footer").fadeOut(600, () => {
+		$("footer").fadeOut(600);
+		$("main").fadeOut(600, () => {
 			let logo = $("#comp-l1az6201");
 			logo.animate({left: '+=263px'}, "slow");
     		let menu = $("#comp-l1azzn7y");  
