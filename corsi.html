@@ -12674,10 +12674,10 @@ $(document).ready(function(){
 	$(".wixui-dropdown-menu__item").click(function() {
 		let btn=$(event.target).attr('id').replace("label","");
 		let link=document.getElementById(btn).childNodes[0].href;
-		event.preventDefault();
+		
 		console.log(link);
 		console.log(location.href);
-		
+		event.preventDefault();
 		<!--
 		if ((link.endsWith("#contatti")) && (location.href == "https://www.codicesicurezza.com/")) {
 			$('html, body').animate({scrollTop: $("#contatti").offset().top},800);
