@@ -12672,8 +12672,8 @@ $(document).ready(function(){
 		});
 	});
 	$(".wixui-dropdown-menu__item").click(function() {
-		let btn=$(event.target).attr('id').replace("label","");
-		let link=document.getElementById(btn).childNodes[0].href;
+		var btn=$(event.target).attr('id').replace("label","");
+		var link=document.getElementById(btn).childNodes[0].href;
 		
 		console.log(link);
 		console.log(location.href);
