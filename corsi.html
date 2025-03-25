@@ -12677,13 +12677,14 @@ $(document).ready(function(){
 		
 		console.log(link);
 		console.log(location.href);
-		event.stopImmediatePropagation();
 		if ((link.endsWith("#contatti")) && (location.href == "https://www.codicesicurezza.com/")) {
 			$('html, body').animate({scrollTop: $("#contatti").offset().top},800);
 			location.href=link;
 			return;
 		}
-		
+		let x = event.cancelable;
+		console.log(x);
+		event.preventDefault();
 		$("footer").fadeOut(600);
 		$("main").fadeOut(600, () => {
 			let logo = $("#comp-l1az6201");
