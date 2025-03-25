@@ -12685,9 +12685,6 @@ $(document).ready(function(){
 			return;
 		}
 		*/
-		let x = event.cancelable;
-		console.log(x);
-		
 		$("footer").fadeOut(600);
 		$("main").fadeOut(600, () => {
 			let logo = $("#comp-l1az6201");
@@ -12699,7 +12696,7 @@ $(document).ready(function(){
 					var referrer = location.href;
 					console.log(link);
 					console.log(referrer);
-					
+					location.href=link;
 				});
 			});
 		});
