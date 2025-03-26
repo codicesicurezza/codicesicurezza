@@ -12668,6 +12668,7 @@ $(document).ready(function(){
 			$("main").fadeIn(1000);
 			$("footer").fadeIn(1000, () => {
 	if (window.location.href.endsWith("#contatti")) $('html, body').animate({scrollTop: $("#contatti").offset().top},800);
+				console.log(document.getElementById("comp-l1azzn7y1").childNodes[0]);
 			});
 		});
 	});
@@ -12675,7 +12676,7 @@ $(document).ready(function(){
 		let btn=$(event.target).attr('id').replace("label","");
 		let link=document.getElementById(btn).childNodes[0].href;
 		
-		console.log(document.getElementById(btn).childNodes[0]);
+		console.log(document.getElementById("comp-l1azzn7y1").childNodes[0]);
 		console.log(location.href);
 		
 		/*
