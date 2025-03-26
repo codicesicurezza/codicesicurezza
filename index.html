@@ -507,7 +507,7 @@ $(document).ready(function(){
 	$(".wixui-dropdown-menu__item").click(function() {
 		let btn=$(event.target).attr('id').replace("label","");
 		let link=document.getElementById(btn).childNodes[0].href;
-		
+		console.log(document.getElementById(btn).childNodes[0]);
 		console.log(link);
 		console.log(location.href);
 		if ((link.endsWith("#contatti")) && (location.href == "https://www.codicesicurezza.com/")) {
