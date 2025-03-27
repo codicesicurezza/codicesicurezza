@@ -499,7 +499,6 @@ $(document).ready(function(){
 		let link=document.getElementById(btn).childNodes[0].href;
 		if ((link.endsWith("#contatti")) && (location.href == "https://www.codicesicurezza.com/")) {
 			$('html, body').animate({scrollTop: $("#contatti").offset().top},800);
-			location.href=link;
 			return;
 		}
 		event.preventDefault();
