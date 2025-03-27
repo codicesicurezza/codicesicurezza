@@ -490,25 +490,18 @@ $(document).ready(function(){
 	 	menu.animate({left: '+=299.5px'}, "slow", () => {
 			$("main").fadeIn(1000);
 			$("footer").fadeIn(1000, () => {
-	if (window.location.href.endsWith("#contatti")) $('html, body').animate({scrollTop: $("#contatti").offset().top},800);
-				console.log(document.getElementById("comp-l1azzn7y1"));
+				if (window.location.href.endsWith("#contatti")) $('html, body').animate({scrollTop: $("#contatti").offset().top},800);
 			});
 		});
 	});
 	$(".wixui-dropdown-menu__item").click(function() {
 		let btn=$(event.target).attr('id').replace("label","");
 		let link=document.getElementById(btn).childNodes[0].href;
-		
-		console.log(document.getElementById("comp-l1azzn7y1").childNodes[0]);
-		console.log(location.href);
-		
-		
 		if ((link.endsWith("#contatti")) && (location.href == "https://www.codicesicurezza.com/")) {
 			$('html, body').animate({scrollTop: $("#contatti").offset().top},800);
 			location.href=link;
 			return;
 		}
-		
 		event.preventDefault();
 		$("footer").fadeOut(600);
 		$("main").fadeOut(600, () => {
@@ -518,9 +511,6 @@ $(document).ready(function(){
 	 		menu.animate({left: '-=299.5px'}, "slow", () => {
 	 		$("#comp-l1azzn7y").hide();
 				$("#comp-l1az6201").fadeOut(400, () => {
-					var referrer = location.href;
-					console.log(link);
-					console.log(referrer);
 					location.href=link;
 				});
 			});
