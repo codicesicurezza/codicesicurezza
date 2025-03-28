@@ -482,9 +482,9 @@
 <script>
 $(document).ready(function(){
 	let logo = $("#comp-l1az6201");
+	let menu = $("#comp-l1azzn7y");
 	logo.fadeIn(400);
 	logo.animate({position: 'relative', 'z-index': '1'}, 0, () => {
-		let menu = $("#comp-l1azzn7y");
 		menu.show();
 		logo.animate({left: '-=263px'}, "slow");
 	 	menu.animate({left: '+=299.5px'}, "slow", () => {
@@ -504,9 +504,7 @@ $(document).ready(function(){
 		event.preventDefault();
 		$("footer").fadeOut(600);
 		$("main").fadeOut(600, () => {
-			//let logo = $("#comp-l1az6201");
 			logo.animate({left: '+=263px'}, "slow");
-    			//let menu = $("#comp-l1azzn7y");  
 	 		menu.animate({left: '-=299.5px'}, "slow", () => {
 	 		menu.hide();
 				logo.fadeOut(400, () => {
