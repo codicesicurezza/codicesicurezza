@@ -482,11 +482,11 @@
 <script>
 $(document).ready(function(){
 	let logo = $("#comp-l1az6201");
-	$("#comp-l1az6201").fadeIn(400);
+	logo.fadeIn(400);
 	logo.animate({position: 'relative', 'z-index': '1'}, 0, () => {
-		$("#comp-l1azzn7y").show();
+		let menu = $("#comp-l1azzn7y");
+		menu.show();
 		logo.animate({left: '-=263px'}, "slow");
-    	let menu = $("#comp-l1azzn7y");  
 	 	menu.animate({left: '+=299.5px'}, "slow", () => {
 			$("main").fadeIn(1000);
 			$("footer").fadeIn(1000, () => {
@@ -504,12 +504,12 @@ $(document).ready(function(){
 		event.preventDefault();
 		$("footer").fadeOut(600);
 		$("main").fadeOut(600, () => {
-			let logo = $("#comp-l1az6201");
+			//let logo = $("#comp-l1az6201");
 			logo.animate({left: '+=263px'}, "slow");
-    		let menu = $("#comp-l1azzn7y");  
+    			//let menu = $("#comp-l1azzn7y");  
 	 		menu.animate({left: '-=299.5px'}, "slow", () => {
-	 		$("#comp-l1azzn7y").hide();
-				$("#comp-l1az6201").fadeOut(400, () => {
+	 		menu.hide();
+				logo.fadeOut(400, () => {
 					location.href=link;
 				});
 			});
