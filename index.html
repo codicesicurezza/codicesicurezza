@@ -525,11 +525,16 @@ $(document).ready(function(){
 	});
 	
 });
-window.addEventListener("popstate", (event) => {
-  console.log(
-    `location: ${document.location}, state: ${JSON.stringify(event.state)}`,
-  );
-	alert("popstate");
+window.addEventListener("load", (event) => {
+  log.textContent = `${log.textContent}load\n`;
+});
+
+document.addEventListener("readystatechange", (event) => {
+  log.textContent = `${log.textContent}readystate: ${document.readyState}\n`;
+});
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  log.textContent = `${log.textContent}DOMContentLoaded\n`;
 });
 </script>
 
