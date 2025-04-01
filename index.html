@@ -525,10 +525,11 @@ $(document).ready(function(){
 	});
 	
 });
-window.addEventListener("popstate", function (event){
-    if (event.state) {
-        alert('popstate');
-    }
+window.addEventListener("popstate", (event) => {
+  console.log(
+    `location: ${document.location}, state: ${JSON.stringify(event.state)}`,
+  );
+	alert("popstate");
 });
 </script>
 
